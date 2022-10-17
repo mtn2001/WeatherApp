@@ -131,13 +131,12 @@ class MainFragment : Fragment() {
 
     private fun updateCurrentCard() = with(binding) {
         model.liveDataCurrent.observe(viewLifecycleOwner) {
-            val maxMinTemp = "${it.maxTemp}°/${it.minTemp}°"
-            val temp = "${it.currentTemp}°"
+            val maxMinTemp = "${it.maxTemp}°/${it.minTemp}"
             tvDateQ.text = it.time
             textView7.text = it.city
-            textView6.text = temp.ifEmpty { maxMinTemp }
+            textView6.text = it.currentTemp.ifEmpty { maxMinTemp }+"°"
             textView8.text = it.condition
-            textView9.text = if (temp.isEmpty()) "" else maxMinTemp
+            textView9.text = if (it.currentTemp.isEmpty()) "" else maxMinTemp
             Picasso.get().load("https:" + it.imageUrl).into(imageView6)
             Log.d("MyLog","${it.city} ")
         }
