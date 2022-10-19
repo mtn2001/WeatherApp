@@ -152,11 +152,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="150dp"
         android:background="#00FFFFFF"
         app:circularflow_defaultRadius="100dp"
         app:circularflow_radiusInDP="100dp"
@@ -170,11 +170,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="hours" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="days" />
 
     </com.google.android.material.tabs.TabLayout>
 

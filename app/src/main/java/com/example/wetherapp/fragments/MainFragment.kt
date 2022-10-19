@@ -74,6 +74,7 @@ class MainFragment : Fragment() {
         vp.adapter = adapter
         TabLayoutMediator(tabLayout, vp) { tab, p ->
             tab.text = tlist[p]
+            tabLayout.setEnabled(true);
         }.attach()
         imageButton.setOnClickListener {
             tabLayout.selectTab(tabLayout.getTabAt(0))
