@@ -19,6 +19,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
+import androidx.viewpager2.widget.ViewPager2
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -69,6 +70,7 @@ class MainFragment : Fragment() {
 
     private fun init() = with(binding) {
         fLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+
 
         val adapter = VpAdapter(activity as FragmentActivity, flist)
         vp.adapter = adapter
