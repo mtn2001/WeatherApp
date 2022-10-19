@@ -138,7 +138,7 @@ class MainFragment : Fragment() {
             textView8.text = it.condition
             textView9.text = if (it.currentTemp.isEmpty()) "" else maxMinTemp
             Picasso.get().load("https:" + it.imageUrl).into(imageView6)
-            Log.d("MyLog","${it.city} ")
+            Log.d("MyLog","${it.imageUrl} ")
         }
     }
 
