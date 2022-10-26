@@ -41,6 +41,7 @@ class WeatherAdapter(val litener: Listener?) : ListAdapter<WetherModel,WeatherAd
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent,false)
+
         return Holder(view,litener)
     }
 

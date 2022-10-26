@@ -140,8 +140,10 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="180dp"
+                android:layout_marginBottom="9dp"
                 android:backgroundTint="#004C6BB9"
                 android:src="?android:attr/actionModeWebSearchDrawable"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.989"
                 app:layout_constraintStart_toEndOf="@+id/tvDateQ"
@@ -155,7 +157,6 @@
         android:id="@+id/tabLayout"
         android:layout_width="390dp"
         android:layout_height="49dp"
-        android:layout_marginTop="10dp"
         android:background="#00FFFFFF"
         app:circularflow_defaultRadius="100dp"
         app:circularflow_radiusInDP="100dp"
@@ -189,4 +190,5 @@
         app:layout_constraintStart_toStartOf="@+id/cardView2"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
