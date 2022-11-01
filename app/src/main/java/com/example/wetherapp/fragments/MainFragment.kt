@@ -19,6 +19,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
+import androidx.viewpager2.widget.ViewPager2
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -71,10 +72,12 @@ class MainFragment : Fragment() {
     private fun init() = with(binding) {
         fLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
+
         val adapter = VpAdapter(activity as FragmentActivity, flist)
         vp.adapter = adapter
         TabLayoutMediator(tabLayout, vp) { tab, p ->
             tab.text = tlist[p]
+            tabLayout.setEnabled(true);
         }.attach()
         imageButton.setOnClickListener {
             tabLayout.selectTab(tabLayout.getTabAt(0))
@@ -139,7 +142,7 @@ class MainFragment : Fragment() {
             textView8.text = it.condition
             textView9.text = if (it.currentTemp.isEmpty()) "" else maxMinTemp
             Picasso.get().load("https:" + it.imageUrl).into(imageView6)
-            Log.d("MyLog","${it.city} ")
+            Log.d("MyLog","${it.imageUrl} ")
         }
     }
 

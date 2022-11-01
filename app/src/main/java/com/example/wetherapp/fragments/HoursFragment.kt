@@ -1,5 +1,6 @@
 package com.example.wetherapp.fragments
 
+import android.*
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import com.example.wetherapp.MainViewModel
 import com.example.wetherapp.R
 import com.example.wetherapp.adapters.WeatherAdapter
@@ -36,7 +38,7 @@ class HoursFragment : Fragment() {
         }
     }
     private fun initRcView() = with(binding){
-        rcview.layoutManager = LinearLayoutManager(activity)
+        rcview.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
         adapter = WeatherAdapter(null)
         rcview.adapter = adapter
 
