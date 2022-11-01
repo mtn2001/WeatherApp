@@ -37,7 +37,7 @@ import com.squareup.picasso.Picasso
 import org.json.JSONObject
 
 
-const val API_KEY = "1caa9406057043c9a3705047221610"
+const val API_KEY = "5e1690d3e78a4ac4b5404453221610"
 
 class MainFragment : Fragment() {
     private lateinit var fLocationClient: FusedLocationProviderClient
